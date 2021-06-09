@@ -1,5 +1,5 @@
 import QtQuick 2.1
-;import QtWebSockets 1.1
+;import QtWebSockets 1.0
 
 WebSocket {
     id: mainSocket
