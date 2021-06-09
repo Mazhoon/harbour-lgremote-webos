@@ -405,7 +405,7 @@ Page {
         maxMargin: content.height + content.anchors.topMargin
         textField.placeholderText: qsTr("Enter pin...")
         textField.inputMethodHints: Qt.ImhDigitsOnly
-        textField.validator: RegExpValidator { regExp: /^[0-9]{3}$/; }
+        textField.validator: RegExpValidator { regExp: /^[0-9]{8}$/; }
         onAcceptableInput: {
             if (pin.textField.acceptableInput) {
                 mainSocket.sendPin(pin.textField.text)
