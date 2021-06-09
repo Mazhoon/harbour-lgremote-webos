@@ -38,7 +38,7 @@ Page {
             }
 
             Label {
-                text: qsTr("by coderus in 0x7DF")
+                text: qsTr("by coderus in 0x7DF, updates version 0.1.7 onwards, Mazoon MMXXI")
                 width: parent.width
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.Wrap
