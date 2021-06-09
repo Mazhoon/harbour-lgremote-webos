@@ -9,7 +9,7 @@ Name:       harbour-lgremote-webos
 %{!?qtc_make:%define qtc_make make}
 
 Summary:    LG Remote for webOS Smart TV
-Version:    0.1.7
+Version:    0.1.8
 Release:    1
 Group:      Qt/Qt
 License:    WTFPL
