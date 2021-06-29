@@ -243,7 +243,7 @@ Page {
             ControlButton {
                 height: parent.height
                 width: content.smallItemSize
-                title: "-"
+                title: "+"
                 titleSize: height / 2
                 color: down ? Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity) : "transparent"
                 borderWidth: 0
@@ -263,7 +263,7 @@ Page {
             ControlButton {
                 height: parent.height
                 width: content.smallItemSize
-                title: "+"
+                title: "-"
                 titleSize: height / 2
                 color: down ? Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity) : "transparent"
                 borderWidth: 0
