@@ -5,6 +5,7 @@ SmoothPanel {
     id: panel
     property MainSocket socket
     property var channelsList: []
+    property bool multipleTypes: false
     property string currentChannelId
     onChannelsListChanged: {
         channelsFilterModel.update()
@@ -77,6 +78,7 @@ SmoothPanel {
                     }
                     Label {
                         id: typeLabel
+                        visible: multipleTypes
                         anchors {
                             left: nameLabel.right
                             leftMargin: Theme.paddingLarge
@@ -100,6 +102,8 @@ SmoothPanel {
             id: channelsFilterModel
 
             function update() {
+                multipleTypes=false
+                const channelTypes=[]
                 clear()
                 if (channelsList == undefined) {
                     return
@@ -110,8 +114,13 @@ SmoothPanel {
                             || channelsList[i].channelName.indexOf(listView.searchPattern) >= 0
                             || channelsList[i].channelNumber.indexOf(listView.searchPattern) >= 0) {
                         append(channelsList[i])
+                        if(channelTypes.indexOf(channelsList[i].channelType) < 0) {
+                            channelTypes.push(channelsList[i].channelType)
+                        }
                     }
                 }
+                multipleTypes=channelTypes.length>1
+
             }
         }
 
