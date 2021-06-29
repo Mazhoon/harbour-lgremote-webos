@@ -243,11 +243,11 @@ Page {
             ControlButton {
                 height: parent.height
                 width: content.smallItemSize
-                title: "+"
+                title: "-"
                 titleSize: height / 2
                 color: down ? Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity) : "transparent"
                 borderWidth: 0
-                onClicked: pointerSocket.sendInput("button", "CHANNELUP")
+                onClicked: pointerSocket.sendInput("button", "CHANNELDOWN")
             }
 
             Item {
@@ -263,11 +263,11 @@ Page {
             ControlButton {
                 height: parent.height
                 width: content.smallItemSize
-                title: "-"
+                title: "+"
                 titleSize: height / 2
                 color: down ? Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity) : "transparent"
                 borderWidth: 0
-                onClicked: pointerSocket.sendInput("button", "CHANNELDOWN")
+                onClicked: pointerSocket.sendInput("button", "CHANNELUP")
             }
         }
 
