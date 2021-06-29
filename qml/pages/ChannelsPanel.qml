@@ -67,13 +67,27 @@ SmoothPanel {
                             left: numLabel.right
                             leftMargin: Theme.paddingLarge
                             verticalCenter: parent.verticalCenter
-                            right: parent.right
+                            //right: parent.right
                         }
                         text: Theme.highlightText(model.channelName, listView.searchPattern, Theme.highlightColor)
                         wrapMode: Text.NoWrap
                         truncationMode: TruncationMode.Fade
                         font.bold: currentChannelId == model.channelId
                         color: item.highlighted ? Theme.highlightColor : Theme.primaryColor
+                    }
+                    Label {
+                        id: typeLabel
+                        anchors {
+                            left: nameLabel.right
+                            leftMargin: Theme.paddingLarge
+                            verticalCenter: parent.verticalCenter
+                            right: parent.right
+                        }
+                        text: Theme.highlightText(model.channelType, listView.searchPattern, Theme.highlightColor)
+                        wrapMode: Text.NoWrap
+                        truncationMode: TruncationMode.Fade
+                        font.bold: currentChannelId == model.channelId
+                        color: item.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     }
                 }
 
